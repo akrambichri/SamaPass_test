@@ -31,7 +31,7 @@ export class SalaryComponent implements OnInit {
 
 
   onSubmit(form: NgForm) {
-    if (form.value.SalaryID == null)
+    if (form.value.id == null)
       this.insertRecord(form);
     else
       this.updateRecord(form);
@@ -39,7 +39,7 @@ export class SalaryComponent implements OnInit {
 
   insertRecord(form: NgForm) {
     this.service.postSalary(form.value).subscribe(res => {
-      this.toastr.success('Inserted successfully', 'EMP. Register');
+      this.toastr.success('Inserted successfully', 'Request Registered');
       this.resetForm(form);
       this.service.refreshList();
     });
@@ -47,7 +47,7 @@ export class SalaryComponent implements OnInit {
 
   updateRecord(form: NgForm) {
     this.service.putSalary(form.value).subscribe(res => {
-      this.toastr.info('Updated successfully', 'EMP. Register');
+      this.toastr.info('Updated successfully', 'Request Registered');
       this.resetForm(form);
       this.service.refreshList();
     });

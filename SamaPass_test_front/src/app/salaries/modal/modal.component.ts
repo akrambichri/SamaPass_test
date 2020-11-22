@@ -47,13 +47,15 @@ export class ModalComponent implements OnInit {
           } else if (event instanceof HttpResponse) {
             this.message = 'Data imported';
             //this.fileInfos = this.service.getFiles();
+            this.service.refreshList();
+            this.closeModal();
           }
         },
         err => {
           this.progress = 0;
           this.message = 'Could not upload the file!';
           this.currentFile = null;
-
+            this.service.refreshList();
           if(err.status === 400){
             this.errors = err.error;
             console.log(this.errors.length);

@@ -1,14 +1,14 @@
 
 <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
-  <input type="hidden" name="Id" [(ngModel)]="service.formData.id" #Id="ngModel">
+  <input type="hidden" name="id" [(ngModel)]="service.formData.id" #id="ngModel">
   <div class="form-group">
     <label>Employee</label>
-    <input name="Employee" #Employee="ngModel" [(ngModel)]="service.formData.employee" class="form-control" required>
-    <div class="validation-error" *ngIf="Employee.invalid && Employee.touched">This field is required.</div>
+    <input name="employee" #employee="ngModel" [(ngModel)]="service.formData.employee" class="form-control" required>
+    <div class="validation-error" *ngIf="employee.invalid && employee.touched">This field is required.</div>
   </div>
   <div class="form-group">
     <label>Amount</label>
-    <input name="Amount" #Amount="ngModel" [(ngModel)]="service.formData.amount" class="form-control">
+    <input name="amount" #amount="ngModel" [(ngModel)]="service.formData.amount" class="form-control">
   </div>
   <div class="form-group">
     <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
