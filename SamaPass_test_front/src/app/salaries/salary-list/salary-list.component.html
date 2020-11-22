@@ -1,0 +1,15 @@
+
+<button type="submit" (click)="openModal()" class="btn btn-lg btn-block">Import</button>
+<table class="table table-hover">
+  <tr>
+    <th>Employee Email</th>
+    <th>Amount</th>
+    <th>Created At</th>
+  </tr>
+  <tr *ngFor="let sal of service.list">
+    <td (click)="populateForm(sal)">{{sal.employee}}</td>
+    <td (click)="populateForm(sal)">{{sal.amount}}</td>
+    <td (click)="populateForm(sal)">{{sal.created_at}}</td>
+    <td><button (click)="onDelete(sal.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+  </tr>
+</table>

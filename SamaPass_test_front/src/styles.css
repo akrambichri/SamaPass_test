@@ -1,0 +1,258 @@
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+/* You can add global styles to this file, and also import other style files */
+.form-group > input {
+  font-weight: bolder;
+}
+.form-group > label {
+  font-weight: lighter;
+}
+
+button[type="submit"] {
+  background-color: #67dfd4;
+  color: #fff;
+}
+.jumbotron {
+  background-color: #fff;
+  padding-top: 32px;
+}
+
+table tr:hover {
+  cursor: pointer;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #dc3545;
+}
+div.validation-error {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* display: grid;
+  justify-items: center;
+  align-items: center; */
+}
+
+/* Overwrite the styles of the mat-dialog-container element globally, but only for those
+that have an id of `modal-component` */
+/* https://stackoverflow.com/a/48689004/9263761 */
+mat-dialog-container#modal-component {
+  border: 3px solid #40f7cf;
+  border-radius: 11px;
+  background-color: #7e7c7c;
+  margin: auto;
+}
+
+#modal-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(1fr, 3);
+}
+
+#modal-title {
+  font-size: 22px;
+}
+
+#modal-footer {
+  justify-self: right;
+  align-self: center;
+}
+
+#modal-action-button {
+  margin-right: 30px;
+  background-color: #c7b3b3;
+}
+
+#modal-cancel-button {
+  background-color: #adaaaa;
+}
+
+#file {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+#file {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+#file + label {
+  background: #106eda;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+#file + label:hover {
+  background-color: darken(#f15d22, 10%);
+}
+
+.myButton {
+  background-color: #44c767;
+  cursor: pointer;
+  color: #ffffff;
+  width: fit-content;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 56px;
+  position: relative;
+  transition: all 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+.myButton:hover {
+  background-color: #5cbf2a;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius: 3px;
+  border-collapse: collapse;
+  height: auto;
+  margin: auto;
+  max-width: 600px;
+  padding: 5px;
+  width: 500px;
+  box-shadow: 0 5px 10px rgba(5, 238, 83, 0.1);
+  animation: float 5s infinite;
+}
+
+.table-fill th {
+  color: rgb(0, 0, 0);
+  background: #44bec7;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(171, 233, 157, 0.918);
+  vertical-align: middle;
+}
+
+.table-fill th:first-child {
+  border-top-left-radius: 3px;
+}
+
+.table-fill th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+
+.table-fill tr {
+  border-top: 1px solid #c1c3d1;
+  border-bottom: 1px solid #c1c3d1;
+  color: rgb(248, 1, 1);
+  font-size: 14px;
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+.table-fill tr:hover td {
+  background: #4e5066;
+  color: #ffffff;
+  border-top: 1px solid #22262e;
+}
+
+.table-fill tr:first-child {
+  border-top: none;
+}
+
+.table-fill tr:last-child {
+  border-bottom: none;
+}
+
+.table-fill tr:nth-child(odd) td {
+  background: #ebebeb;
+}
+
+.table-fill tr:nth-child(odd):hover td {
+  background: #4e5066;
+}
+
+.table-fill tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+
+.table-fill tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+.table-fill td {
+  background: #ffffff;
+  padding: 5px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #c1c3d1;
+}
+
+.table-fill td:last-child {
+  border-right: 0px;
+}
+
+.table-fill th.text-left {
+  text-align: left;
+}
+
+.table-fill th.text-center {
+  text-align: center;
+}
+
+.table-fill th.text-right {
+  text-align: right;
+}
+
+.table-fill td.text-left {
+  text-align: left;
+}
+
+.table-fill td.text-center {
+  text-align: center;
+}
+
+.table-fill td.text-right {
+  text-align: right;
+}

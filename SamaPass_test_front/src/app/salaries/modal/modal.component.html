@@ -1,0 +1,41 @@
+
+<input
+  id="file"
+  type="file"
+  (click)="resetFile($event)"
+  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel,text/plain"
+  (change)="selectFile($event)" />
+<label For="file">
+  {{currentFile == null ? "Choose a file" : "Choose another file"}}
+</label>
+
+<p>{{currentFile != null ? "Selected file : " + currentFile.name : null}}</p>
+
+<button class="myButton" [disabled]="!currentFile" (click)="upload()">
+{{progress>0
+  ? "File is Uploading"
+  : "Upload File"}}
+</button>
+
+<div  class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+    attr.aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: progress + '%' }">
+    {{ progress }}%
+  </div>
+</div>
+
+<div *ngIf="message" role="alert">{{ message }}</div>
+
+<div *ngIf="errors">
+  <div>List of Errors</div>
+  <table class="table-fill">
+    <tr>
+      <th class="text-left">Row Number</th>
+      <th class="text-left">Message</th>
+    </tr>
+    <tr *ngFor="let error of errors">
+      <td>{{error.row_num}}</td>
+      <td>{{error.message}}</td>
+    </tr>
+  </table>
+</div>
